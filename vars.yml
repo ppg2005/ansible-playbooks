@@ -1,0 +1,14 @@
+---
+- name: pb to use var
+  hosts: all
+  become: true
+
+  vars:
+    package: apache2
+
+  tasks:
+    - name: install package using var
+      apt:
+        name: "{{ package }}"
+        state: present
+ 

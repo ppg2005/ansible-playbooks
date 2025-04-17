@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: List all installed packages
+      shell: dpkg --list
+      register: installed_packages
+
+    - name: Display installed packages
+      debug:
+        var: installed_packages.stdout
+ 

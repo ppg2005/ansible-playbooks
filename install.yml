@@ -1,0 +1,14 @@
+- name: Ensure all specified packages are installed
+  hosts: all
+  become: true
+  vars_files:
+    - vars_file.yml
+  tasks:
+    - name: Install required packages
+      package:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ packages }}"
+
+
+ 

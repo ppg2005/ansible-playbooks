@@ -1,0 +1,5 @@
+{
+  "ansible.ansiblePath": "/usr/bin/ansible",
+  "ansible.pythonInterpreter": "/usr/bin/python3"
+}
+
