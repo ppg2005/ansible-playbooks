@@ -1,0 +1,10 @@
+---
+- name : use debug
+  hosts: local
+  tasks:
+  - shell:  cat /etc/hosts
+    register: output
+
+  - debug:
+      var: output
+
